@@ -57,7 +57,7 @@ public class StudentSATScoreController {
         }
     }
 
-    @GetMapping("/rank")
+    @PostMapping("/rank")
     ResponseEntity<SuccessResponse<Integer>> getStudentRank(@RequestBody Map<String, String> requestBody) {
         final String studentName = requestBody.get("studentName");
         try {
@@ -98,5 +98,4 @@ public class StudentSATScoreController {
             throw new RuntimeException(e);
         }
     }
-
 }
